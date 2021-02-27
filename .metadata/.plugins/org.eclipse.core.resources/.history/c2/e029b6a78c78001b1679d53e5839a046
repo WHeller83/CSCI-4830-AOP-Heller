@@ -1,0 +1,20 @@
+public aspect TraceAspectHeller {
+	
+	pointcut ClassToTrace(): within(*App);
+	pointcut MethodToTrace(): ClassToTrace() && execution(String getName());
+
+	before(): MethodToTrace(){
+		String info = 
+	    		  //Signature shows the method's location and args
+	    		  thisJoinPointStaticPart.getSignature() + ", " 
+	    		  //getFile shows the method's package tree
+	            + thisJoinPointStaticPart.getSourceLocation().getFileName() + ", " 
+	              //getLine gets the line the method is on
+	            + thisJoinPointStaticPart.getSourceLocation().getLine();
+	      System.out.println("\t-->" + info);
+	}
+	
+	after(): MethodToTrace(){
+	      System.out.println("\t<--" + thisJoinPointStaticPart.getSignature());
+	}
+}

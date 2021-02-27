@@ -1,0 +1,13 @@
+public aspect TraceAspectHeller {
+	
+	pointcut ClassToTrace(): within(*App);
+	pointcut MethodToTrace(): ClassToTrace() && execution(String getName());
+
+	before(): MethodToTrace(){
+		System.out.println("--BEFORE--");
+	}
+	
+	after(): MethodToTrace(){
+		System.out.println("--AFTER--");
+	}
+}

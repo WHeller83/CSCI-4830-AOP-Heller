@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;project-aop-02250-Heller/src/TraceAspectHeller.ja&apos; to &apos;TraceAspectHeller.aj&apos;" description="Rename resource &apos;TraceAspectHeller.ja&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/TraceAspectHeller.ja" name="TraceAspectHeller.aj" stamp="1614382269785" updateReferences="true"/>
+</session>
